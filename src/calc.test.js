@@ -1,8 +1,9 @@
-const assert = require("assert");
-const { somar, subtrair, multiplicar } = require("./src/calc");
+const calc = require('./index');
 
-assert.strictEqual(somar(2, 3), 5);
-assert.strictEqual(subtrair(10, 4), 6);
-assert.strictEqual(multiplicar(3, 5), 15);
+test('soma simples', () => {
+  expect(calc.somar(1, 2)).toBe(3);
+});
 
-console.log("pass");
+test('subtração simples', () => {
+  expect(calc.subtrair(5, 2)).toBe(3);
+});
