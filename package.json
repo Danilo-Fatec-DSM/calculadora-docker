@@ -1,12 +1,11 @@
 {
-  "name": "nova-pasta",
+  "name": "pipeline-calculadora",
   "version": "1.0.0",
-  "description": "",
   "main": "calc.js",
   "scripts": {
     "test": "node test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
 }
