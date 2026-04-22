@@ -160,6 +160,9 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }}
 
+      - name: Subir Ambiente (Docker Compose)
+        run: docker compose up -d
+
       - name: Validar Comunicação (Ping)
         run: docker compose exec -T calculadora-app ping -c 1 servico-vizinho
 
