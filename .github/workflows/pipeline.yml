@@ -160,5 +160,8 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }}
 
-      - name: Rodar testes dentro do Container
-        run: docker run 0danilo0/docker:latest npm test
+      - name: Validar Comunicação (Ping)
+        run: docker compose exec -T calculadora-app ping -c 1 servico-vizinho
+
+      - name: Rodar Testes Unitários (NPM)
+        run: docker compose exec -T calculadora-app npm test
